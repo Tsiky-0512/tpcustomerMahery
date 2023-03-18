@@ -1,0 +1,7 @@
+mg\itu\mahery\tpcustomermahery\ejb\CustomerManager.class
+mg\itu\mahery\tpcustomermahery\entities\MicroMarket.class
+mg\itu\mahery\tpcustomermahery\entities\Discount.class
+mg\itu\mahery\tpcustomermahery\entities\Customer.class
+mg\itu\mahery\tpcustomermahery\jsf\CustomerBean.class
+mg\itu\mahery\tpcustomermahery\JakartaRestConfiguration.class
+mg\itu\mahery\tpcustomermahery\config\ConfigJSF.class
