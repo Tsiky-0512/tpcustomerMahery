@@ -7,6 +7,7 @@ package mg.itu.tpcustomermahery.jsf;
 import jakarta.ejb.EJB;
 import jakarta.faces.view.ViewScoped;
 import jakarta.inject.Named;
+import java.io.Serializable;
 import mg.itu.tpcustomermahery.ejb.CustomerManager;
 import mg.itu.tpcustomermahery.entities.Customer;
 
@@ -14,15 +15,16 @@ import mg.itu.tpcustomermahery.entities.Customer;
  *
  * @author Peabody
  */
-@Named
+@Named(value = "customerDetailsBean")
 @ViewScoped
-public class CustomerDetailsBean {
+public class CustomerDetailsBean implements Serializable{
+
     private int idCustomer;
     private Customer customer;
-    
+
     @EJB
     private CustomerManager customerManager;
-    
+
     public int getIdCustomer() {
         return idCustomer;
     }
@@ -30,18 +32,18 @@ public class CustomerDetailsBean {
     public void setIdCustomer(int idCustomer) {
         this.idCustomer = idCustomer;
     }
-    
+
     public Customer getCustomer() {
-      return customer;
+        return customer;
     }
-    
+
     public String update() {
         customer = customerManager.update(customer);
         return "customerList";
     }
-    
+
     public void loadCustomer() {
         this.customer = customerManager.findById(idCustomer);
     }
-    
+
 }
